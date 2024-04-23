@@ -8,8 +8,7 @@ PERCENTAGE_WIN: float = 0.2
 
 @app.route('/win')
 def get_win_or_nowin(name: str) -> str:
-    return random.random() <  PERCENTAGE_WIN ? 'win' : 'nowin'
-
+    return 'win' if random.random() < PERCENTAGE_WIN else 'nowin'
 
 @app.route('/liveness')
 def liveness() -> str:
