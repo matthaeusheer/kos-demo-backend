@@ -2,8 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: kos-demo
   name: kos-demo
 spec:
   replicas: 3
@@ -39,9 +37,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: kos-demo
-  name: kos-demo
+  name: svc-kos-demo
 spec:
   ports:
   - port: 8000
@@ -64,15 +60,10 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: kos-demo
+            name: svc-kos-demo
             port:
               number: 8000
   tls:
   - hosts:
-    - demobackend.k8s.kos.cheap
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: kos-demo
+    - demo.kos.cheap
 
