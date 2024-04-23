@@ -20,7 +20,7 @@ spec:
     spec:
       serviceAccountName: kos-demo
       containers:
-      - image: matthaeusheer/kos_demo:{{ .Values.image.version }}
+      - image: matthaeusheer/kos-demo-backend:{{ .Values.image.version }}
         name: kos-demo-container
         securityContext:
           runAsUser: 1000
