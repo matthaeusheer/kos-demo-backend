@@ -18,7 +18,6 @@ spec:
       labels:
         app: kos-demo
     spec:
-      serviceAccountName: kos-demo
       containers:
       - image: matthaeusheer/kos-demo-backend:{{ .Values.image.version }}
         name: kos-demo-container
