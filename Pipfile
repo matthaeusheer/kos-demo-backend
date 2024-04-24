@@ -9,6 +9,7 @@ flask = "==3.0.0"
 gunicorn = "==21.2.0"
 psycopg = "==3.1.17"
 psycopg-binary = "==3.1.17"
+flask-cors = "*"
 
 [dev-packages]
 
