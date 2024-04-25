@@ -15,7 +15,8 @@ metrics.info("app_info", "Application info", version="1.0.3")
 @app.route("/win")
 def get_win_or_nowin() -> dict[str, str]:
     win_result = "win" if random.random() < PERCENTAGE_WIN else "nowin"
-    return {"win_result": win_result, "additional_info": os.environ["HOSTNAME"]}
+    additional_info = ""
+    return {"win_result": win_result, "additional_info": additional_info}
 
 
 @app.route("/liveness")
