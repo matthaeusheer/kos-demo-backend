@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: matthaeusheer/kos-demo-backend:0.0.4
+          tags: matthaeusheer/kos-demo-backend:0.0.5
 
       - name: Log out of Docker Hub
         run: docker logout
