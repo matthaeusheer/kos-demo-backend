@@ -10,6 +10,7 @@ gunicorn = "==21.2.0"
 psycopg = "==3.1.17"
 psycopg-binary = "==3.1.17"
 flask-cors = "*"
+prometheus-flask-exporter = "*"
 
 [dev-packages]
 
