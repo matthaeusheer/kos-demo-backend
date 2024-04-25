@@ -38,7 +38,7 @@ kind: Service
 metadata:
   name: svc-kos-demo
   labels:
-  app: kos-demo
+    app: kos-demo
 spec:
   ports:
   - port: 8000
