@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: kos-demo-monitor
+  labels:
+    release: prometheus-operator
+spec:
+  endpoints:
+    - port: http
+      interval: 5s
+      path: /metrics
+  namespaceSelector:
+    matchNames:
+      - kos-demo-backend-ns
+  selector:
+    matchLabels:
+      app: kos-demo
