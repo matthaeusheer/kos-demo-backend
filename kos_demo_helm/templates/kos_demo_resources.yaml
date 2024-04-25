@@ -19,7 +19,7 @@ spec:
         app: kos-demo
     spec:
       containers:
-      - image: harbor.k8s.kos.cheap/library/kos-demo-backend:{{ .Values.image.version | required }}
+      - image: harbor.k8s.kos.cheap/library/kos-demo-backend:{{ .Values.image.version }}
         name: kos-demo-container
         securityContext:
           runAsUser: 1000
