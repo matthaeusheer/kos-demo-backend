@@ -8,14 +8,15 @@ CORS(app)
 metrics = PrometheusMetrics(app)
 
 PERCENTAGE_WIN: float = 0.2
-metrics.info('app_info', 'Application info', version='1.0.3')
+metrics.info("app_info", "Application info", version="1.0.3")
 
 
-@app.route('/win')
-def get_win_or_nowin() -> str:
-    return 'win' if random.random() < PERCENTAGE_WIN else 'nowin'
+@app.route("/win")
+def get_win_or_nowin() -> dict[str, str]:
+    win_result = "win" if random.random() < PERCENTAGE_WIN else "nowin"
+    return {"win_result": win_result, "additional_info": ""}
 
 
-@app.route('/liveness')
+@app.route("/liveness")
 def liveness() -> str:
     return "OK"
