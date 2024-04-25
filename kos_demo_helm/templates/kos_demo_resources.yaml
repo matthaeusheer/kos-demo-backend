@@ -36,8 +36,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  app: kos-demo
   name: svc-kos-demo
+  labels:
+  app: kos-demo
 spec:
   ports:
   - port: 8000
