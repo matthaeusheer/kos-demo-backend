@@ -22,3 +22,4 @@ def get_win_or_nowin() -> dict[str, str]:
 @app.route("/liveness")
 def liveness() -> str:
     return "OK"
+
