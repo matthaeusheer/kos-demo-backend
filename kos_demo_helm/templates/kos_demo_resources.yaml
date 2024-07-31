@@ -19,7 +19,7 @@ spec:
         app: kos-demo
     spec:
       containers:
-      - image: {{ .Values.image.repo }}/library/kos-demo-backend:{{ .Values.image.version }}
+      - image: {{ .Values.image.repo }}/library/kos-demo-backend:badversion
         name: kos-demo-container
         securityContext:
           runAsUser: 1000
