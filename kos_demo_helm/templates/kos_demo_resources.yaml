@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: kos-demo
 spec:
-  replicas: 15
+  replicas: 3
   selector:
     matchLabels:
       app: kos-demo
