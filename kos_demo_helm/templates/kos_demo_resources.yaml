@@ -4,13 +4,13 @@ kind: Deployment
 metadata:
   name: kos-demo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: kos-demo
   strategy:
     rollingUpdate:
-      maxSurge: 25%
+      #maxSurge: 25%
       maxUnavailable: 25%
     type: RollingUpdate
   template:
